@@ -1,7 +1,8 @@
+
 <template>
     <div>
-        <h4>Profile component loaded...</h4>
-    </div>
+        
+    </div>  
 </template>
 
 <script>

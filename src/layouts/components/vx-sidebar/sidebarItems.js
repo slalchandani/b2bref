@@ -31,7 +31,7 @@ export default [
         name: 'Start Here!',
         slug: 'getting-started',
         i18n: "Getting Started",
-        tag: "New",
+        tag: "2",
         tagColor: "warning"
       },
       {
@@ -39,13 +39,7 @@ export default [
         name: 'Analytics',
         slug: 'dashboard-analytics',
         i18n: "Analytics"
-      },
-      {
-        url: '/dashboard/referrals',
-        name: "Referrals",
-        slug: "dashboard-referrals",
-        i18n: "referrals",
-      },
+      }
     ]
   },
   {
@@ -91,16 +85,6 @@ export default [
         url: '/references/request',
         name: 'Request',
         slug: 'request-reference'        
-      },
-      {
-        url: '/references/share',
-        name: "Share",
-        slug: "share-reference"        
-      },      
-      {
-        url: '/references/provided',
-        name: "Provided",
-        slug: "provided-references"
       }
     ]
   }

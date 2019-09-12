@@ -33,27 +33,17 @@
               </ul>
             </vs-dropdown-menu>
           </vs-dropdown>
-        </div>
-
-        <!-- <div class="bookmark-container">
-          <feather-icon icon="StarIcon" :svgClasses="['stoke-current text-warning', {'text-white': navbarColor != '#fff'}]" class="cursor-pointer p-2" @click.stop="showBookmarkPagesDropdown = !showBookmarkPagesDropdown" />
-                    <div v-click-outside="outside" class="absolute bookmark-list w-1/3 xl:w-1/4 mt-4" v-if="showBookmarkPagesDropdown">
-          <vx-auto-suggest :autoFocus="true" :data="navbarSearchAndPinList" @selected="selected" @actionClicked="actionClicked" inputClassses="w-full" show-action show-pinned background-overlay></vx-auto-suggest>
-          </div>
-        </div> -->
+        </div>    
+        <router-link to="/contacts/add">
+          <vs-button type="filled" icon="person_add">Add Contact</vs-button>
+        </router-link>      
+        <router-link to="/references/request">
+          <vs-button type="filled" icon="add" style="margin-left:5px">Request Reference</vs-button>
+        </router-link>
       </template>
 
 
       <vs-spacer></vs-spacer>
-
-            <!-- SEARCHBAR
-            <div class="search-full-container w-full h-full absolute left-0 rounded-lg" :class="{'flex': showFullSearch}" v-show="showFullSearch">
-                <vx-auto-suggest :autoFocus="showFullSearch" :data="navbarSearchAndPinList" @selected="selected" ref="navbarSearch" @closeSearchbar="showFullSearch = false" placeholder="Search..." class="w-full" inputClassses="w-full vs-input-no-border vs-input-no-shdow-focus no-icon-border" icon="SearchIcon" background-overlay></vx-auto-suggest>
-                <div class="absolute right-0 h-full z-50">
-                    <feather-icon icon="XIcon" class="px-4 cursor-pointer h-full close-search-icon" @click="showFullSearch = false"></feather-icon>
-                </div>
-            </div>
-            <feather-icon icon="SearchIcon" @click="showFullSearch = true" class="cursor-pointer navbar-fuzzy-search ml-4"></feather-icon> -->
 
       <!-- NOTIFICATIONS -->
       <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer ml-4">
@@ -128,9 +118,15 @@
           </div>
           <vs-dropdown-menu class="vx-navbar-dropdown">
             <ul style="min-width: 9rem">
-              <li class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white"><feather-icon icon="UserIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Profile</span></li>
-              <li class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white"><feather-icon icon="AwardIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Account</span></li>
-              <li class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white"><feather-icon icon="SettingsIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Preferences</span></li>
+              <li @click="$router.push('/pages/profile')" class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white">
+                <feather-icon icon="UserIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Profile</span>
+              </li>
+              <li @click="$router.push('/pages/account')" class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white">
+                <feather-icon icon="AwardIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Account</span>
+              </li>
+              <li @click="$router.push('/pages/preferences')" class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white">
+                <feather-icon icon="SettingsIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Preferences</span>
+              </li>
 
               <vs-divider class="m-1"></vs-divider>
               <li class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white" @click="$router.push('/pages/login')"><feather-icon icon="LogOutIcon" svgClasses="w-4 h-4"></feather-icon> <span class="ml-2">Logout</span></li>

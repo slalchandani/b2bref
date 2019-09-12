@@ -22,12 +22,18 @@
 export default [
   {
     url: null,
-    name: "Dashboard",
-    tag: "New",
-    tagColor: "warning",
+    name: "Dashboard",    
     icon: "HomeIcon",
     i18n: "Dashboard",
     submenu : [
+      {
+        url: '/dashboard/start',
+        name: 'Start Here!',
+        slug: 'getting-started',
+        i18n: "Getting Started",
+        tag: "New",
+        tagColor: "warning"
+      },
       {
         url: '/dashboard/analytics',
         name: 'Analytics',
@@ -71,22 +77,30 @@ export default [
   },
   {
     url: null,
-    name: "Analytics",
+    name: "References",
     tagColor: "warning",
-    icon: "DatabaseIcon",
-    i18n: "Analytics",
+    icon: "BriefcaseIcon",
+    i18n: "References",
     submenu : [
       {
-        url: '/analytics/responses',
-        name: 'Responses',
-        slug: 'analytic-responses',
-        i18n: "Analytic Respones"
+        url: '/references/manage',
+        name: "Manage",
+        slug: "manage-references"
       },
       {
-        url: '/analytics/activity',
-        name: "Activity",
-        slug: "view-activity",
-        i18n: "View Activity",
+        url: '/references/request',
+        name: 'Request',
+        slug: 'request-reference'        
+      },
+      {
+        url: '/references/share',
+        name: "Share",
+        slug: "share-reference"        
+      },      
+      {
+        url: '/references/provided',
+        name: "Provided",
+        slug: "provided-references"
       }
     ]
   }

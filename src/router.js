@@ -45,6 +45,11 @@ const router = new Router({
                 redirect: '/dashboard/analytics'
               },
               {
+                path: '/dashboard/start',
+                name: 'getting-started',
+                component: () => import('./views/GettingStarted.vue')
+              },
+              {
                 path: '/dashboard/analytics',
                 name: 'dashboard-analytics',
                 component: () => import('./views/DashboardAnalytics.vue'),
@@ -73,15 +78,70 @@ const router = new Router({
                 component: () => import("./views/contact/ImportContacts.vue")
               },
               {
-                path: '/analytics/responses',
-                name: 'response-analytics',
-                component: () => import("./views/analytics/ResponseAnalytics.vue")
+                path: '/references/request',
+                name: 'request-reference',
+                component: () => import("./views/references/RequestReference.vue")
               },
               {
-                path: '/analytics/activity',
-                name: 'activity-analytics',
-                component: () => import("./views/analytics/ActivityAnalytics.vue")
-              }
+                path: '/references/manage',
+                name: 'manage-references',
+                component: () => import("./views/references/ManageReference.vue")
+              },
+              {
+                path: '/references/share',
+                name: 'share-references',
+                component: () => import("./views/references/ShareReference.vue")
+              },
+              {
+                path: '/references/provided',
+                name: 'provided-references',
+                component: () => import("./views/references/ProvideReference.vue")
+              },
+              // =========================================
+              // Pages  Routes
+              // -----------------------------------------
+              {
+                path: '/pages/profile',
+                name: 'page-profile',
+                component: () => import('@/views/pages/Profile.vue'),
+                meta: {
+                    breadcrumb: [
+                        { title: 'Home', url: '/' },
+                        { title: 'Pages' },
+                        { title: 'Profile', active: true },
+                    ],
+                    pageTitle: 'Profile',
+                    rule: 'editor'
+                },                
+              },
+              {
+                path: '/pages/account',
+                name: 'page-account',
+                component: () => import('@/views/pages/Account.vue'),
+                meta: {
+                    breadcrumb: [
+                        { title: 'Home', url: '/' },
+                        { title: 'Pages' },
+                        { title: 'Account', active: true },
+                    ],
+                    pageTitle: 'Account',
+                    rule: 'editor'
+                }
+              },
+              {
+                path: '/pages/preferences',
+                name: 'page-preferences',
+                component: () => import('@/views/pages/Preferences.vue'),
+                meta: {
+                    breadcrumb: [
+                        { title: 'Home', url: '/' },
+                        { title: 'Pages' },
+                        { title: 'Preferences', active: true },
+                    ],
+                    pageTitle: 'Preferences',
+                    rule: 'editor'
+                }
+              },
             ],
         },
     // =============================================================================

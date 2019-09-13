@@ -270,7 +270,7 @@ export default {
     subscribersGained: {
         series: [{
             name: 'Subscribers',
-            data: [28, 40, 36, 52, 38, 60, 55]
+            data: [2, 4, 6, 8, 10, 12, 18]
         }],
         chartOptions: {
             grid: {
@@ -441,10 +441,10 @@ export default {
             },
         },
     },
-    ordersRecevied: {
+    verifiedContacts: {
         series: [{
             name: 'Orders',
-            data: [10, 15, 8, 15, 7, 12, 8]
+            data: [3, 5, 8, 15, 20, 22, 25]
         }],
         chartOptions: {
             grid: {

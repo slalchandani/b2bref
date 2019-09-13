@@ -81,7 +81,7 @@
                         <vs-divider></vs-divider>
 
                         <!-- NAVBAR TYPE -->
-                        <div class="mt-4">
+                        <!-- <div class="mt-4">
                             <h5 class="mb-2">Navbar Type</h5>
                             <div>
                                 <vs-radio class="mr-4" v-model="navbarTypeLocal" vs-value="navbar-hidden">Hidden</vs-radio>
@@ -90,10 +90,10 @@
                                 <vs-radio v-model="navbarTypeLocal" vs-value="navbar-floating">Floating</vs-radio>
                             </div>
                         </div>
-                        <vs-divider></vs-divider>
+                        <vs-divider></vs-divider> -->
 
                         <!-- FOOTER TYPE -->
-                        <div class="mt-4">
+                        <!-- <div class="mt-4">
                             <h5 class="mb-2">Footer Type</h5>
                             <div>
                                 <vs-radio class="mr-4" v-model="footerTypeLocal" vs-value="hidden">Hidden</vs-radio>
@@ -101,22 +101,22 @@
                                 <vs-radio v-model="footerTypeLocal" vs-value="sticky">Sticky</vs-radio>
                             </div>
                         </div>
-                        <vs-divider></vs-divider>
+                        <vs-divider></vs-divider> -->
 
                         <!-- SHOW SCROLL TO TOP -->
-                        <div class="mt-4 flex justify-between">
+                        <!-- <div class="mt-4 flex justify-between">
                             <h5 class="mb-2">Hide Scroll To Top</h5>
                             <vs-switch v-model="hideScrollToTopLocal"/>
                         </div>
-                        <vs-divider></vs-divider>
+                        <vs-divider></vs-divider> -->
 
                         <!-- ROUTER ANIMATION -->
-                        <div class="mt-4">
+                        <!-- <div class="mt-4">
                             <h5 class="mb-2">Router Animation {{ routerTransitionLocal }}</h5>
                             <vs-select v-model="routerTransitionLocal">
                                 <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="(item,index) in routerTransitionsList" />
                             </vs-select>
-                        </div>
+                        </div> -->
                     </div>
                 </VuePerfectScrollbar>
             </div>

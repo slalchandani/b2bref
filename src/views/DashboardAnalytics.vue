@@ -5,30 +5,29 @@
 
 <template>
   <div id="dashboard-analytics">
-    <div class="vx-row">
+    <div class="vx-row">     
 
-      <!-- CARD 1: CONGRATS -->
-      <div class="vx-col w-full lg:w-1/2 mb-base">
-        <vx-card slot="no-body" class="text-center bg-primary-gradient greet-user">
-                    <img src="../assets/images/elements/decore-left.png" class="decore-left" alt="Decore Left" width="200" >
-                    <img src="../assets/images/elements/decore-right.png" class="decore-right" alt="Decore Right" width="175">
-          <feather-icon icon="AwardIcon" class="p-6 mb-8 bg-primary inline-flex rounded-full text-white shadow" svgClasses="h-8 w-8"></feather-icon>
-          <h1 class="mb-6 text-white">Congratulations Sanj,</h1>
-          <p class="xl:w-3/4 lg:w-4/5 md:w-2/3 w-4/5 mx-auto text-white">
-            You've successfully added <strong>10 references!</strong><br/>Discuss <a class="text-white" style="text-decoration: underline" href="https://en.wikipedia.org/wiki/Gamification" target="_blank">Gamification techniques</a> here.
-          </p>
-        </vx-card>
-      </div>
-
-      <!-- CARD 2: SUBSCRIBERS GAINED -->
+      <!-- CARD 1: SUBSCRIBERS GAINED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
         <statistics-card-line icon="UsersIcon" statistic="10" statisticTitle="References Accepted" :chartData="analyticsData.subscribersGained" type='area'></statistics-card-line>
       </div>
 
+      <!-- CARD 2: ORDER RECIEVED -->
+      <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
+        <statistics-card-line icon="ShoppingBagIcon" statistic="125" statisticTitle="Verified Contacts" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
+      </div>
+
       <!-- CARD 3: ORDER RECIEVED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
-        <statistics-card-line icon="ShoppingBagIcon" statistic="125" statisticTitle="Verified Contacts" :chartData="analyticsData.ordersRecevied" color='warning' type='area'></statistics-card-line>
+        <statistics-card-line icon="UsersIcon" statistic="125" statisticTitle="Demo Data One" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
       </div>
+
+      <!-- CARD 4: ORDER RECIEVED -->
+      <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
+        <statistics-card-line icon="UsersIcon" statistic="125" statisticTitle="Demo Data Two" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
+      </div>
+
+
     </div>
 
     <div class="vx-row">
@@ -58,17 +57,17 @@
 
         <!-- CARD 7: Sales Stats -->
         <div class="vx-col w-full lg:w-1/3 mb-base">
-          <vx-card title="Reference Stats" subtitle="Last 6 Months">
+          <vx-card title="Reference Stats" subtitle="Last 3 Months">
             <template slot="actions">
               <feather-icon icon="MoreVerticalIcon" svgClasses="w-6 h-6 text-grey"></feather-icon>
             </template>
             <div class="flex">
-              <span class="flex items-center"><div class="h-3 w-3 rounded-full mr-1 bg-primary"></div><span>Received References</span></span>
-              <span class="flex items-center ml-4"><div class="h-3 w-3 rounded-full mr-1 bg-success"></div><span>Reference Requests</span></span>
+              <span class="flex items-center"><div class="h-3 w-3 rounded-full mr-1 bg-primary"></div><span>Received Requests</span></span>
+              <span class="flex items-center ml-4"><div class="h-3 w-3 rounded-full mr-1 bg-danger"></div><span>Outstanding Requests</span></span>              
             </div>
             <div slot="no-body-bottom">
-              <vue-apex-charts type=radar height=400 :options="analyticsData.statisticsRadar.chartOptions" :series="analyticsData.statisticsRadar.series" />
-            </div>
+              <vue-apex-charts style="margin-bottom:25px" type="pie" width="88%" :options="chartOptions" :series="series" />
+            </div>           
           </vx-card>
         </div>
 
@@ -133,7 +132,7 @@
 
     <div class="vx-row">
       <!-- CARD 9: DISPATCHED ORDERS -->
-      <div class="vx-col w-full">
+      <div class="vx-col w-full lg:w-2/3 mb-base">
         <vx-card title="Dispatched Reference Requests">
           <div slot="no-body" class="mt-4">
             <vs-table :data="users">
@@ -181,7 +180,19 @@
             </vs-table>
           </div>
 
-        </vx-card>
+        </vx-card>        
+      </div>
+      <div class="vx-col w-full lg:w-1/3 mb-base">
+      <vx-card title="Service Credit Hours">
+        <div slot="no-body" class="mt-4">
+          <vs-table>
+            <template slot="thead">
+              <vs-th>Company</vs-th>
+              <vs-th>Hours</vs-th>
+            </template>
+          </vs-table>
+        </div>
+      </vx-card>
       </div>
     </div>
 
@@ -203,6 +214,32 @@ export default {
             show: false,
             items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
             nextNum: 10,
+            series: [ 2, 13],
+            chartOptions: {
+              labels: ['Outstanding', 'Received'],
+              fill: {
+                colors: ['#ea5455','#5b3cc4']
+              },
+              legend: {
+                show: false
+              },
+              options: {    
+                plotOptions: {
+                  pie: {
+                    customScale: 0.85,
+                    dataLabels: {
+                      enabled: false
+                    }
+                  }
+                },
+                legend: {
+                  show: false
+                },
+                dataLabels: {
+                  enabled: false
+                }
+              }
+            },
             'tableList': [
                 'vs-th: Component',
                 'vs-tr: Component',

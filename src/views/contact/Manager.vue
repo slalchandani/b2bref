@@ -25,7 +25,7 @@
                 </vx-card>
             </vs-col>
            
-            <vs-col vs-lg="5" vs-sm="6" vs-xs="12">
+            <vs-col vs-lg="4" vs-sm="6" vs-xs="12">
                 <vx-card
                     title="Contact Details"
                 >
@@ -135,7 +135,7 @@
                 </vx-card>  
             </vs-col>            
            
-            <vs-col vs-lg="4" vs-sm="6" vs-xs="12">
+            <vs-col vs-lg="5" vs-sm="6" vs-xs="12">
                 <vx-card
                     title="Contact Activity"
                 >

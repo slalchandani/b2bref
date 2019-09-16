@@ -55,7 +55,7 @@
             </vx-card>
         </div>
 
-        <!-- CARD 7: Sales Stats -->
+        <!-- CARD 7: Reference Stats -->
         <div class="vx-col w-full lg:w-1/3 mb-base">
           <vx-card title="Reference Stats" subtitle="Last 3 Months">
             <template slot="actions">
@@ -66,7 +66,8 @@
               <span class="flex items-center ml-4"><div class="h-3 w-3 rounded-full mr-1 bg-danger"></div><span>Outstanding Requests</span></span>              
             </div>
             <div slot="no-body-bottom">
-              <vue-apex-charts style="margin-bottom:25px" type="pie" width="88%" :options="chartOptions" :series="series" />
+              <vue-apex-charts type="pie" width="75%" :options="chartOptions" :series="series" />
+              <br/>
             </div>           
           </vx-card>
         </div>

@@ -159,11 +159,11 @@ export default {
             searchQuery: '',
             showFullSearch: false,
             unreadNotifications: [
-                { index: 0, title: 'New Message', msg: 'Are your going to meet me tonight?', icon: 'MessageSquareIcon', time: this.randomDate({sec: 10}), category: 'primary' },
-                { index: 1, title: 'New Order Recieved', msg: 'You got new order of goods.', icon: 'PackageIcon', time: this.randomDate({sec: 40}), category: 'success' },
-                { index: 2, title: 'Server Limit Reached!', msg: 'Server have 99% CPU usage.', icon: 'AlertOctagonIcon', time: this.randomDate({min: 1}), category: 'danger' },
-                { index: 3, title: 'New Mail From Peter', msg: 'Cake sesame snaps cupcake', icon: 'MailIcon', time: this.randomDate({min: 6}), category: 'primary' },
-                { index: 4, title: 'Bruce\'s Party', msg: 'Chocolate cake oat cake tiramisu', icon: 'CalendarIcon', time: this.randomDate({hr: 2}), category: 'warning' },
+                { index: 0, title: 'New Message From Jane', msg: 'Did you review my reference information?', icon: 'MessageSquareIcon', time: this.randomDate({sec: 10}), category: 'primary' },
+                { index: 1, title: 'New Reference Recieved', msg: 'You got new reference from Mark Twain.', icon: 'PackageIcon', time: this.randomDate({sec: 40}), category: 'success' },
+                { index: 2, title: 'Reference Rejected!', msg: 'Vat rejected your reference request :(', icon: 'AlertOctagonIcon', time: this.randomDate({min: 1}), category: 'danger' },
+                { index: 3, title: 'New Message From Peter', msg: 'Not sure how to rate your SQL skills.  Any thoughts?', icon: 'MailIcon', time: this.randomDate({min: 6}), category: 'primary' },
+                { index: 4, title: 'Direct Meeting Scheduled', msg: 'David Lynch has requested a direct call with FA Solutions', icon: 'CalendarIcon', time: this.randomDate({hr: 2}), category: 'warning' },
             ],
             settings: { // perfectscrollbar settings
                 maxScrollbarLength: 60,

@@ -87,6 +87,20 @@ export default [
         slug: 'request-reference'        
       }
     ]
+  },
+  {
+    url: null,
+    name: "External",
+    tagColor: "warning",
+    icon: "StarIcon",
+    i18n: "External",
+    submenu: [
+      {
+        url: "/external/references",
+        name: "Reference",
+        slug: "external-reference"
+      }
+    ]
   }
   
 ]

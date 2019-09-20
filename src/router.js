@@ -97,6 +97,26 @@ const router = new Router({
                 name: 'provided-references',
                 component: () => import("./views/references/ProvideReference.vue")
               },
+              {
+                path: '/external/references',
+                name: 'external-reference',
+                component: () => import("./views/external/Reference.vue")
+              },
+              {
+                path: '/external/references2',
+                name: 'external-reference2',
+                component: () => import("./views/external/Reference2.vue")
+              },
+              {
+                path: '/external/references3',
+                name: 'external-reference3',
+                component: () => import("./views/external/Reference3.vue")
+              },
+              {
+                path: '/external/final',
+                name: 'external-reference-final',
+                component: () => import("./views/external/ReferenceFinal.vue")
+              },
               // =========================================
               // Pages  Routes
               // -----------------------------------------

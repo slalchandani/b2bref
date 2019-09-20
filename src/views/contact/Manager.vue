@@ -127,7 +127,7 @@
                         <vs-input class="w-full" icon-pack="feather" icon="icon-tag" icon-no-border label-placeholder="Education" v-model="education" />
                         </div>
                     </div>    
-                    <div class="float-right mr-7 mt-5">
+                    <div class="float-right mr-7 mt-10">
                         <vs-button class="mr-2">Share</vs-button>
                         <vs-button class="mr-2">View</vs-button>
                         <vs-button>Request Reference</vs-button>

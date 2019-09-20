@@ -206,7 +206,10 @@ export default {
   },
   methods: {
     formSubmitted() {
-      alert("Form submitted!");
+      this.$router.push({
+          name: 'reference-request-summary',
+          
+      });
     }
   },
   components: {

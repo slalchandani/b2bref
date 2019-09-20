@@ -72,8 +72,8 @@
 
         <vs-row class="mt-5">
             <vs-col>
-                 <vx-card class="bg-dark text-white">
-                    <p>
+                 <vx-card class="bg-dark text-white" style="padding:120px">
+                    <p style="text-align:center">
                         Summary list of questions and responses goes here with opportunity to go back and edit that section.
                     </p>
                 </vx-card>

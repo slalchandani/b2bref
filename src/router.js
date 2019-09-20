@@ -98,6 +98,11 @@ const router = new Router({
                 component: () => import("./views/references/ProvideReference.vue")
               },
               {
+                path: '/references/summary',
+                name: 'reference-request-summary',
+                component: () => import("./views/references/RequestSummary.vue")
+              },
+              {
                 path: '/external/references',
                 name: 'external-reference',
                 component: () => import("./views/external/Reference.vue")

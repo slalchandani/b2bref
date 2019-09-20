@@ -40,7 +40,9 @@
                             <tfoot>
                                 <tr>                                    
                                     <td colspan="2" class="p-1">
-                                        <vs-button size="small" color="primary" type="filled">View</vs-button>
+                                        <div class="btn-group">
+                                            <vs-button size="small" color="primary" type="filled">View</vs-button>
+                                        </div>                                        
                                     </td>
                                 </tr>
                             </tfoot>
@@ -93,7 +95,7 @@
                                 <tr>
                                     <td class="p-1"></td>
                                     <td class="p-1">
-                                        <vs-button color="warning" size="small">Add Backup</vs-button>                                        
+                                        <vs-button color="disabled" size="small">Add Backup</vs-button>                                        
                                     </td>
                                 </tr>   
                                 <tr>
@@ -163,7 +165,9 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="2" class="p-1">
-                                        <vs-button size="small" color="primary" type="filled">View</vs-button>
+                                        <div class="btn-group">
+                                            <vs-button size="small" color="primary" type="filled">View</vs-button>
+                                        </div>                                        
                                     </td>
                                 </tr>
                             </tfoot>
@@ -232,7 +236,9 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="2" class="p-1">
-                                        <vs-button size="small" color="danger" type="filled">Reminder Recommended</vs-button>
+                                        <div class="btn-group">
+                                             <vs-button size="small" color="danger" type="filled">Reminder Recommended</vs-button>
+                                        </div>                                       
                                     </td>
                                 </tr>
                             </tfoot>

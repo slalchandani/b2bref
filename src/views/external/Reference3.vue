@@ -34,45 +34,13 @@
             </vs-col>
         </vs-row>
         
-        <vs-row class="mt-6">
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="Private Note for John Doe" title-color="primary">
-                    <p>
-                        Please emphasize my great character strengths and my honesty.
-                        I am hoping you can get to this quick so I can secure the sale.
-                    </p>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="About View Sonic" title-color="primary">
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td>Website:</td>
-                                <td>www.viewsonic.com</td>
-                            </tr>
-                            <tr>
-                                <td>Social Media:</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Services:</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="View Sonic Services" title-color="primary">
-                    <p>Services offered by ViewSonic could be listed here.</p>
-                </vx-card>
-            </vs-col>
+        <vs-row>
+            <corporate-panel/>
         </vs-row>
 
         <vs-row class="mt-5">
             <vs-col>
-                <vx-card title="Question 3 of 3" title-color="primary" subtitle="Please provide responses to the Reference Questions presented.">
+                <vx-card title="Step 3 of 3" title-color="primary" subtitle="Please let us know about View Sonic's performance">
                     <div class="vx-row">
                         <div class="vx-col w-full">
                             <b>A. Did View Sonic exceed your expectations?</b>
@@ -84,10 +52,10 @@
                                     <vs-radio v-model="radio1" vs-value="No" color="danger">No</vs-radio>
                                 </li>
                             </ul>
-                            <vs-textarea placeholder="Enter comments here..."></vs-textarea>
+                            <vs-textarea rows="5" placeholder="Enter comments here..."></vs-textarea>
                             <div>
                                 <b>B. Is there anything else to consider before working with View Sonic?</b> 
-                                <vs-textarea placeholder="Enter comments here..."></vs-textarea>
+                                <vs-textarea rows="5" placeholder="Enter comments here..."></vs-textarea>
                             </div>
                             <div>
                                 <b>C. Would you be willing to answer additional questions regarding your reference when shared with prospective clients?</b>
@@ -99,7 +67,7 @@
                                         <vs-radio v-model="radio2" color="danger" vs-value="No2">No</vs-radio>
                                     </li>
                                 </ul>
-                                <vs-textarea placeholder="Enter comments here..."></vs-textarea>
+                                <vs-textarea rows="5" placeholder="Enter comments here..."></vs-textarea>
                             </div>
                             <div class="ml-10">
                                 <div class="vx-row">
@@ -142,8 +110,11 @@
                 </vx-card>
             </vs-col>
         </vs-row>   
+        <router-link to="/external/References2">
+            <vs-button color="warning" class="ml-5">Back</vs-button>
+        </router-link>
         <router-link to="/external/final">
-             <vs-button class="mt-5 ml-5">
+             <vs-button class="mt-5 ml-2">
                 Save &amp; Review
             </vs-button>
         </router-link>       
@@ -151,6 +122,7 @@
 </template>
 <script>
 import vSelect from 'vue-select'
+import CorporatePanel from '@/components/CorporatePanel.vue'
 export default {
     name: 'ExternalReference',
     data() {
@@ -165,7 +137,8 @@ export default {
         }
     },
     components: {
-        'v-select': vSelect
+        'v-select': vSelect,
+        'corporate-panel': CorporatePanel
     }
 }
 </script>

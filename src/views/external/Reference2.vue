@@ -34,45 +34,13 @@
             </vs-col>
         </vs-row>
         
-        <vs-row class="mt-6">
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="Private Note for John Doe" title-color="primary">
-                    <p>
-                        Please emphasize my great character strengths and my honesty.
-                        I am hoping you can get to this quick so I can secure the sale.
-                    </p>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="About View Sonic" title-color="primary">
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td>Website:</td>
-                                <td>www.viewsonic.com</td>
-                            </tr>
-                            <tr>
-                                <td>Social Media:</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Services:</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="View Sonic Services" title-color="primary">
-                    <p>Services offered by ViewSonic could be listed here.</p>
-                </vx-card>
-            </vs-col>
-        </vs-row>
+        <vs-row>
+            <corporate-panel/>
+        </vs-row>        
 
         <vs-row class="mt-5">
             <vs-col>
-                <vx-card title="Question 2 of 3" title-color="primary" subtitle="Please provide responses to the Reference Questions presented.">
+                <vx-card title="Step 2 of 3" title-color="primary" subtitle="Please share your overall impressions of View Sonic">
                     <div class="vx-row">
                         <div class="vx-col md:w-1/2 w-full">
                             <b>A. How would you rate View Sonic's overall performance?</b> 
@@ -95,8 +63,11 @@
                 </vx-card>
             </vs-col>
         </vs-row>   
+         <router-link to="/external/References">
+            <vs-button color="warning" class="ml-5">Back</vs-button>
+        </router-link>
         <router-link to="/external/References3">
-            <vs-button class="mt-5 ml-5">
+            <vs-button class="mt-5 ml-2">
                 Save &amp; Continue
             </vs-button>
         </router-link>
@@ -106,6 +77,7 @@
 
 import vSelect from 'vue-select'
 import StarRating from 'vue-star-rating'
+import CorporatePanel from '@/components/CorporatePanel.vue'
 
 export default {
     name: 'ExternalReference',
@@ -122,7 +94,8 @@ export default {
     },
     components: {
         'v-select': vSelect,
-        StarRating
+        StarRating,
+        'corporate-panel': CorporatePanel
     }
 }
 </script>

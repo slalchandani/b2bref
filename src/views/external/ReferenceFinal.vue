@@ -34,41 +34,9 @@
             </vs-col>
         </vs-row>
         
-        <vs-row class="mt-6">
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="Private Note for John Doe" title-color="primary">
-                    <p>
-                        Please emphasize my great character strengths and my honesty.
-                        I am hoping you can get to this quick so I can secure the sale.
-                    </p>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="About View Sonic" title-color="primary">
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td>Website:</td>
-                                <td>www.viewsonic.com</td>
-                            </tr>
-                            <tr>
-                                <td>Social Media:</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Services:</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="View Sonic Services" title-color="primary">
-                    <p>Services offered by ViewSonic could be listed here.</p>
-                </vx-card>
-            </vs-col>
-        </vs-row>
+       <vs-row>
+           <corporate-panel/>
+       </vs-row>
 
         <vs-row class="mt-5">
             <vs-col>
@@ -79,7 +47,10 @@
                 </vx-card>
             </vs-col>
         </vs-row> 
-        <vs-button class="mt-5 ml-5">
+         <router-link to="/external/References3">
+            <vs-button color="warning" class="ml-5">Back</vs-button>
+        </router-link>
+        <vs-button class="mt-5 ml-2">
             Submit Reference
         </vs-button>
         <hr class="mt-5 mb-5"/>
@@ -97,6 +68,8 @@
 </template>
 <script>
 import vSelect from 'vue-select'
+import CorporatePanel from '@/components/CorporatePanel.vue'
+
 export default {
     name: 'ExternalReference',
     data() {
@@ -111,7 +84,8 @@ export default {
         }
     },
     components: {
-        'v-select': vSelect
+        'v-select': vSelect,
+        'corporate-panel': CorporatePanel
     }
 }
 </script>

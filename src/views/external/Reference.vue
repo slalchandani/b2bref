@@ -33,46 +33,16 @@
                 </vx-card>
             </vs-col>
         </vs-row>
-        
-        <vs-row class="mt-6">
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="Private Note for John Doe" title-color="primary">
-                    <p>
-                        Please emphasize my great character strengths and my honesty.
-                        I am hoping you can get to this quick so I can secure the sale.
-                    </p>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="About View Sonic" title-color="primary">
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td>Website:</td>
-                                <td>www.viewsonic.com</td>
-                            </tr>
-                            <tr>
-                                <td>Social Media:</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Services:</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </vx-card>
-            </vs-col>
-            <vs-col vs-lg="4" vs-sm="12" vs-xs="12">
-                <vx-card title="View Sonic Services" title-color="primary">
-                    <p>Services offered by ViewSonic could be listed here.</p>
-                </vx-card>
-            </vs-col>
+
+        <vs-row>
+            <corporate-panel></corporate-panel>
         </vs-row>
+        
+        
 
         <vs-row class="mt-5">
             <vs-col>
-                <vx-card title="Question 1 of 3" title-color="primary" subtitle="Please provide responses to the Reference Questions presented.">
+                <vx-card title="Step 1 of 3" title-color="primary" subtitle="Tell us about your relationship with Sam.">
                     <div class="vx-row">
                         <div class="vx-col md:w-1/3 w-full">
                             <b>A. How do you know Sam?</b> 
@@ -95,33 +65,65 @@
                             </ul>
                             <ul class="mt-3">
                                 <li>
-                                    <vs-radio v-model="radio2" vs-value="Former Collegue">Former Collegue / Past Client</vs-radio>
+                                    <vs-checkbox v-model="chkWorkedTogether" vs-value="Former Collegue">Former Collegue / Past Client</vs-checkbox>
                                 </li>
                                 <li>
-                                    <vs-radio v-model="radio2" vs-value="Existing Client">Existing Client</vs-radio>
+                                    <vs-checkbox v-model="chkExisting" vs-value="Existing Client">Existing Client</vs-checkbox>
                                 </li>
                             </ul>
                         </div>
                         <div class="vx-col md:w-1/3 w-full">
-                            <b>B. How long have you worked together?</b> 
-                            <vx-input-group class="mb-base mt-3">
-                                <vs-input v-model="input1"/>
-                                <template slot="append">
-                                    <v-select :options="['months', 'years']" v-model="selected" placeholder="- Select Unit of Measure -"></v-select>
-                                </template>
-                            </vx-input-group>
+                            <div class="vx-row">
+                                <b>B. How long have you worked together?</b>
+                                <div class="vx-col md:w-1/2 w-full">
+                                    <vx-input-group class="mb-base mt-3">
+                                        <vs-input v-model="wtYears"/>
+                                        <template slot="append">
+                                            <div class="append-text bg-primary">
+                                                <span>Years</span>
+                                            </div>
+                                        </template>
+                                    </vx-input-group>
+                                </div>
+                                 <div class="vx-col md:w-1/2 w-full">
+                                    <vx-input-group class="mb-base mt-3">
+                                        <vs-input v-model="wtMonths"/>
+                                        <template slot="append">
+                                            <div class="append-text bg-primary">
+                                                <span>Months</span>
+                                            </div>
+                                        </template>
+                                    </vx-input-group>
+                                </div>
+                            </div>
 
-                             <b>C. How long have you worked for View Sonic?</b> 
-                            <vx-input-group class="mb-base mt-3">
-                                <vs-input v-model="input1"/>
-                                <template slot="append">
-                                    <v-select :options="['months', 'years']" v-model="selected" placeholder="- Select Unit of Measure -"></v-select>
-                                </template>
-                            </vx-input-group>
+                            <div class="vx-row">
+                                <b>C. How long have you worked for View Sonic?</b> 
+                                <div class="vx-col md:w-1/2 w:full">
+                                    <vx-input-group class="mb-base mt-3">
+                                        <vs-input v-model="vwYears"/>
+                                        <template slot="append">
+                                            <div class="append-text bg-primary">
+                                                <span>Years</span>
+                                            </div>
+                                        </template>
+                                    </vx-input-group>
+                                </div>
+                                <div class="vx-col md:w-1/2 w:full">
+                                    <vx-input-group class="mb-base mt-3">
+                                        <vs-input v-model="vwMonths"/>
+                                        <template slot="append">
+                                            <div class="append-text bg-primary">
+                                                <span>Months</span>
+                                            </div>
+                                        </template>
+                                    </vx-input-group>
+                                </div>
+                            </div>
                         </div>
                         <div class="vx-col md:w-1/3 w-full">
                            <b>D. What did you work on together?</b>
-                           <vs-textarea v-model="textarea" placeholder="Provide a brief overview of projects or tasks you and Sam worked on together..." rows="5"></vs-textarea>
+                           <vs-textarea v-model="textarea" placeholder="Provide a brief overview of projects or tasks you and Sam worked on together..." rows="6"></vs-textarea>
                         </div>                        
                     </div>
                     
@@ -129,7 +131,7 @@
             </vs-col>
         </vs-row>   
         <router-link to="/external/References2">
-             <vs-button class="mt-5 ml-5">
+             <vs-button class="mt-5 ml-2">
                 Save &amp; Continue
             </vs-button>
         </router-link>
@@ -138,6 +140,7 @@
 </template>
 <script>
 import vSelect from 'vue-select'
+import CorporatePanel from '@/components/CorporatePanel.vue'
 export default {
     name: 'ExternalReference',
     data() {
@@ -148,11 +151,16 @@ export default {
             checkbox1: "Former",
             input1: "1",
             selected: "years",
-            textarea: ""
+            textarea: "",
+            wtYears: 1,
+            wtMonths: 0,
+            chkWorkedTogether: true,
+            chkExisting: false
         }
     },
     components: {
-        'v-select': vSelect
+        'v-select': vSelect,
+        'corporate-panel': CorporatePanel
     }
 }
 </script>

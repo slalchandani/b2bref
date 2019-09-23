@@ -72,7 +72,7 @@
 
         <vs-row class="mt-5">
             <vs-col>
-                 <vx-card class="bg-dark text-white" style="padding:120px">
+                 <vx-card style="background-color: #10163a;padding:120px" class="text-white">
                     <p style="text-align:center">
                         Summary list of questions and responses goes here with opportunity to go back and edit that section.
                     </p>

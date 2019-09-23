@@ -9,22 +9,22 @@
 
       <!-- CARD 1: SUBSCRIBERS GAINED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
-        <statistics-card-line icon="UsersIcon" statistic="10" statisticTitle="References Accepted" :chartData="analyticsData.subscribersGained" type='area'></statistics-card-line>
+        <statistics-card-line icon="UsersIcon" statistic="10" statisticTitle="References Pending" :chartData="analyticsData.subscribersGained" type='area'></statistics-card-line>
       </div>
 
       <!-- CARD 2: ORDER RECIEVED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
-        <statistics-card-line icon="ShoppingBagIcon" statistic="125" statisticTitle="Verified Contacts" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
+        <statistics-card-line icon="ShoppingBagIcon" statistic="5" statisticTitle="References Completed" :chartData="analyticsData.verifiedContacts" type='area'></statistics-card-line>
       </div>
 
       <!-- CARD 3: ORDER RECIEVED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
-        <statistics-card-line icon="UsersIcon" statistic="125" statisticTitle="Demo Data One" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
+        <statistics-card-line icon="UsersIcon" statistic="2" statisticTitle="References Declined" :chartData="analyticsData.referencesDeclined" type='area'></statistics-card-line>
       </div>
 
       <!-- CARD 4: ORDER RECIEVED -->
       <div class="vx-col w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 mb-base">
-        <statistics-card-line icon="UsersIcon" statistic="125" statisticTitle="Demo Data Two" :chartData="analyticsData.verifiedContacts" color='primary' type='area'></statistics-card-line>
+        <statistics-card-line icon="UsersIcon" statistic="12" statisticTitle="References Accepted" :chartData="analyticsData.referenecesAccepted" type='area'></statistics-card-line>
       </div>
 
 
@@ -44,10 +44,10 @@
                 </div>
 
                 <ul>
-                    <li v-for="orderData in analyticsData.productOrdersRadialBar.analyticsData" :key="orderData.orderType" class="flex mb-3 justify-between">
+                    <li v-for="orderData in analyticsData.productOrdersRadialBar.analyticsData" :key="orderData.referenceStat" class="flex mb-3 justify-between">
                         <span class="flex items-center">
                                 <span class="inline-block h-4 w-4 rounded-full mr-2 bg-white border-3 border-solid" :class="`border-${orderData.color}`"></span>
-                                <span class="font-semibold">{{ orderData.orderType }}</span>
+                                <span class="font-semibold">{{ orderData.referenceStat }}</span>
                         </span>
                         <span>{{ orderData.counts }}</span>
                     </li>
@@ -62,11 +62,11 @@
               <feather-icon icon="MoreVerticalIcon" svgClasses="w-6 h-6 text-grey"></feather-icon>
             </template>
             <div class="flex">
-              <span class="flex items-center"><div class="h-3 w-3 rounded-full mr-1 bg-primary"></div><span>Received Requests</span></span>
-              <span class="flex items-center ml-4"><div class="h-3 w-3 rounded-full mr-1 bg-danger"></div><span>Outstanding Requests</span></span>              
+              <span class="flex items-center"><div class="h-3 w-3 rounded-full mr-1 bg-primary"></div><span>% Participation</span></span>
+              <span class="flex items-center ml-4"><div class="h-3 w-3 rounded-full mr-1 bg-danger"></div><span>% Client Interaction</span></span>              
             </div>
             <div slot="no-body-bottom">
-              <vue-apex-charts type="pie" width="75%" :options="chartOptions" :series="series" />
+              <vue-apex-charts type="pie" width="90%" :options="chartOptions" :series="series" />
               <br/>
             </div>           
           </vx-card>
@@ -215,11 +215,11 @@ export default {
             show: false,
             items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
             nextNum: 10,
-            series: [ 2, 13],
+            series: [ 18, 82],
             chartOptions: {
-              labels: ['Outstanding', 'Received'],
+              labels: ['Client Interaction', 'Participation'],
               fill: {
-                colors: ['#ea5455','#5b3cc4']
+                colors: ['#10163a','#5b3cc4']
               },
               legend: {
                 show: false

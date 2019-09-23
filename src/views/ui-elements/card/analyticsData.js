@@ -444,7 +444,123 @@ export default {
     verifiedContacts: {
         series: [{
             name: 'Orders',
-            data: [3, 5, 8, 15, 20, 22, 25]
+            data: [1, 1, 1, 3, 3, 4, 5]
+        }],
+        chartOptions: {
+            grid: {
+                show: false,
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+            chart: {
+                toolbar: {
+                    show: false,
+                },
+                sparkline: {
+                    enabled: true
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth',
+                width: 2.5
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shadeIntensity: 0.9,
+                    opacityFrom: 0.7,
+                    opacityTo: 0.5,
+                    stops: [0, 80, 100]
+                }
+            },
+            xaxis: {
+                type: 'numeric',
+                lines: {
+                    show: false,
+                },
+                axisBorder: {
+                    show: false,
+                },
+                labels: { show: false }
+            },
+            yaxis: [{
+                y: 0,
+                offsetX: 0,
+                offsetY: 0,
+                padding: { left: 0, right: 0 },
+            }],
+            tooltip: {
+                x: { show: false }
+            },
+        },
+    },
+    referenecesAccepted: {
+        series: [{
+            name: 'Accepted',
+            data: [1, 2, 3, 4, 5, 8, 12]
+        }],
+        chartOptions: {
+            grid: {
+                show: false,
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+            chart: {
+                toolbar: {
+                    show: false,
+                },
+                sparkline: {
+                    enabled: true
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth',
+                width: 2.5
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shadeIntensity: 0.9,
+                    opacityFrom: 0.7,
+                    opacityTo: 0.5,
+                    stops: [0, 80, 100]
+                }
+            },
+            xaxis: {
+                type: 'numeric',
+                lines: {
+                    show: false,
+                },
+                axisBorder: {
+                    show: false,
+                },
+                labels: { show: false }
+            },
+            yaxis: [{
+                y: 0,
+                offsetX: 0,
+                offsetY: 0,
+                padding: { left: 0, right: 0 },
+            }],
+            tooltip: {
+                x: { show: false }
+            },
+        },
+    },
+    referencesDeclined: {
+        series: [{
+            name: 'Orders',
+            data: [1, 1, 1, 1, 2, 2, 2]
         }],
         chartOptions: {
             grid: {
@@ -751,13 +867,14 @@ export default {
     // Product Orders
     productOrdersRadialBar: {
         analyticsData: [
-            { 'orderType': 'Finished', 'counts': 23043, color: 'primary' },
-            { 'orderType': 'Pending', 'counts': 14658, color: 'warning' },
-            { 'orderType': 'Rejected ', 'counts': 4758, color: 'danger' },
+            { 'referenceStat': 'Retrieved', 'counts': 5, color: 'primary' },
+            { 'referenceStat': 'Outstanding', 'counts': 10, color: 'warning' },
+            { 'referenceStat': 'Cancelled ', 'counts': 2, color: 'danger' },
+            { 'referenceStat': 'Thank You Sent', counts: 5, color: 'success'}
         ],
-        series: [70, 52, 26],
+        series: [90, 75, 10, 90],
         chartOptions: {
-            labels: ['Finished', 'Pending', 'Rejected'],
+            labels: ['Retrieved', 'Outstanding', 'Cancelled', 'Thank You'],
             plotOptions: {
                 radialBar: {
                     size: 165,
@@ -784,7 +901,7 @@ export default {
                             show: true,
                             label: 'Total',
                             formatter: function() {
-                                return 42459
+                                return 19
                             }
                         }
                     }
@@ -808,7 +925,7 @@ export default {
                     }
                 }
             }],
-            colors: ['#7961F9', '#FF9F43', '#EA5455'],
+            colors: ['#7961F9', '#FF9F43', '#EA5455', '#006400'],
             fill: {
                 type: 'gradient',
                 gradient: {
@@ -816,7 +933,7 @@ export default {
                     shade: 'dark',
                     type: 'vertical',
                     shadeIntensity: 0.5,
-                    gradientToColors: ['#9c8cfc', '#FFC085', '#f29292'],
+                    gradientToColors: ['#9c8cfc', '#FFC085', '#f29292', '#00FF00'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,

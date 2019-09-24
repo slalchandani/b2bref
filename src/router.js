@@ -122,6 +122,16 @@ const router = new Router({
                 name: 'external-reference-final',
                 component: () => import("./views/external/ReferenceFinal.vue")
               },
+              {
+                path: '/external/overview',
+                name: 'external-overview',
+                component: () => import("./views/external/Overview.vue")
+              },
+              {
+                path: '/external/details',
+                name: 'external-detail',
+                component: () => import("./views/external/Detail.vue")
+              },
               // =========================================
               // Pages  Routes
               // -----------------------------------------

@@ -99,6 +99,11 @@ export default [
         url: "/external/references",
         name: "Reference",
         slug: "external-reference"
+      },
+      {
+        url: "/external/overview",
+        name: "Overview",
+        slug: "external-overview"
       }
     ]
   }

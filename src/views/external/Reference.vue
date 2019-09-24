@@ -44,7 +44,7 @@
             <vs-col>
                 <vx-card title="Step 1 of 3" title-color="primary" subtitle="Tell us about your relationship with Sam.">
                     <div class="vx-row">
-                        <div class="vx-col md:w-1/3 w-full">
+                        <div class="vx-col md:w-1/4 w-full">
                             <b>A. How do you know Sam?</b> 
                             <ul class="center-x mt-3">
                                 <li>
@@ -77,7 +77,7 @@
                                 <b>B. How long have you worked together?</b>
                                 <div class="vx-col md:w-1/2 w-full">
                                     <vx-input-group class="mb-base mt-3">
-                                        <vs-input v-model="wtYears"/>
+                                        <vs-input v-model="wtYears" maxlength="2"/>
                                         <template slot="append">
                                             <div class="append-text bg-primary">
                                                 <span>Years</span>
@@ -87,7 +87,7 @@
                                 </div>
                                  <div class="vx-col md:w-1/2 w-full">
                                     <vx-input-group class="mb-base mt-3">
-                                        <vs-input v-model="wtMonths"/>
+                                        <vs-input v-model="wtMonths" maxlength="2"/>
                                         <template slot="append">
                                             <div class="append-text bg-primary">
                                                 <span>Months</span>
@@ -101,7 +101,7 @@
                                 <b>C. How long have you worked for View Sonic?</b> 
                                 <div class="vx-col md:w-1/2 w:full">
                                     <vx-input-group class="mb-base mt-3">
-                                        <vs-input v-model="vwYears"/>
+                                        <vs-input v-model="vwYears" maxlength="2"/>
                                         <template slot="append">
                                             <div class="append-text bg-primary">
                                                 <span>Years</span>
@@ -111,7 +111,7 @@
                                 </div>
                                 <div class="vx-col md:w-1/2 w:full">
                                     <vx-input-group class="mb-base mt-3">
-                                        <vs-input v-model="vwMonths"/>
+                                        <vs-input v-model="vwMonths" maxlength="2" />
                                         <template slot="append">
                                             <div class="append-text bg-primary">
                                                 <span>Months</span>
@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="vx-col md:w-1/3 w-full">
+                        <div class="vx-col md:w-1/3 w-full ml-10">
                            <b>D. What did you work on together?</b>
                            <vs-textarea v-model="textarea" placeholder="Provide a brief overview of projects or tasks you and Sam worked on together..." rows="6"></vs-textarea>
                         </div>                        

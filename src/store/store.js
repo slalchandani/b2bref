@@ -14,11 +14,15 @@ import actions from "./actions"
 
 Vue.use(Vuex)
 
+import moduleEmail from './email/moduleEmail.js'
 
 export default new Vuex.Store({
     getters,
     mutations,
     state,
     actions,
+    modules: {
+      email: moduleEmail
+    },
     strict: process.env.NODE_ENV !== 'production'
 })

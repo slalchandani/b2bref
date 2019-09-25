@@ -85,6 +85,11 @@ export default [
         url: '/references/request',
         name: 'Request',
         slug: 'request-reference'        
+      },
+      {
+        url: '/references/direct',
+        name: 'B2B Direct',
+        slug: 'email'
       }
     ]
   },

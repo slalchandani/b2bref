@@ -131,10 +131,20 @@ export default {
         changeRouteTitle(title) {
             this.routeTitle = title;
         },
+        updateNavbar(val) {
+            if(val == 'static') this.updateNavbarColor("#fff")
+            this.navbarType = val;
+        },
         updateNavbarColor(val) {
             this.navbarColor = val;
             if(val == "#fff") this.isNavbarDark = false
             else this.isNavbarDark = true
+        },
+        updateFooter(val) {
+            this.footerType = val;
+        },
+        updateRouterTransition(val) {
+            this.routerTransition = val;
         },
         handleWindowResize(event) {
             this.windowWidth = event.currentTarget.innerWidth;

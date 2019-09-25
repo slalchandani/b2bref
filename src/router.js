@@ -132,6 +132,14 @@ const router = new Router({
                 name: 'external-detail',
                 component: () => import("./views/external/Detail.vue")
               },
+              {
+                path: '/references/direct',
+                name: 'email',
+                component: () => import('./views/apps/email/Email.vue'),
+                meta: {
+                    rule: 'editor'
+                }
+              },
               // =========================================
               // Pages  Routes
               // -----------------------------------------

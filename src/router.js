@@ -103,6 +103,16 @@ const router = new Router({
                 component: () => import("./views/references/SharedStatus.vue")
               },
               {
+                path: '/references/share/2',
+                name: 'share-reference-2',
+                component: () => import("./views/references/ShareReference2.vue")
+              },
+              {
+                path: '/references/share/3',
+                name: 'share-reference-3',
+                component: () => import("./views/references/ShareReference3.vue")
+              },
+              {
                 path: '/references/share',
                 name: 'share-reference',
                 component: () => import("./views/references/ShareReference.vue")

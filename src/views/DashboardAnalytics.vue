@@ -140,10 +140,10 @@
               <template slot="thead">
                 <vs-th>REQUEST ID</vs-th>
                 <vs-th>STATUS</vs-th>
-                <vs-th>EMAIL ADDRESS</vs-th>
+                <vs-th>CONTACTS</vs-th>
                 <vs-th>BUSINESS NAME</vs-th>                
                 <vs-th>DATE SUBMITTED</vs-th>
-                <vs-th>ESTIMATED RESPONSE DATE</vs-th>
+                <vs-th>EST. RESPONSE DATE</vs-th>
               </template>
 
               <template slot-scope="{data}">
@@ -166,10 +166,10 @@
                   <vs-td :data="data[indextr].orderNo">
                     <span>{{data[indextr].location}}</span>
                   </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
+                  <!-- <vs-td :data="data[indextr].orderNo">
                     <span>{{data[indextr].distance}}</span>
                     <vs-progress :percent="data[indextr].distPercent" :color="data[indextr].statusColor"></vs-progress>
-                  </vs-td>
+                  </vs-td> -->
                   <vs-td :data="data[indextr].orderNo">
                     <span>{{data[indextr].startDate}}</span>
                   </vs-td>
@@ -251,7 +251,7 @@ export default {
             ],
             users: [{
                     "orderNo": 879985,
-                    "status": "Moving",
+                    "status": "Received",
                     "statusColor": "success",
                     "operator": "Cinar Knowles",
                     "operatorImg": "avatar-s-2.png",
@@ -261,15 +261,15 @@ export default {
                         { name: 'Julee Rossignol', img: 'avatar-s-10.png' },
                         { name: 'Darcey Nooner', img: 'avatar-s-8.png' }
                     ],
-                    "location": "Anniston, Alabama",
+                    "location": "Digital Media",
                     "distance": "130 km",
                     "distPercent": 80,
-                    "startDate": "14:58 26/07/2018",
-                    "estDelDate": "28/07/2018"
+                    "startDate": "14:58 26/07/2019",
+                    "estDelDate": "28/07/2019"
                 },
                 {
                     "orderNo": 156897,
-                    "status": "Pending",
+                    "status": "Outstanding",
                     "statusColor": "warning",
                     "operator": "Britany Ryder",
                     "operatorImg": "avatar-s-4.png",
@@ -278,15 +278,15 @@ export default {
                         { name: 'Lilian Nenez', img: 'avatar-s-2.png' },
                         { name: 'Alberto Glotzbach', img: 'avatar-s-3.png' }
                     ],
-                    "location": "Cordova, Alaska",
+                    "location": "Johnson & Johnson",
                     "distance": "234 km",
                     "distPercent": 60,
-                    "startDate": "14:58 26/07/2018",
-                    "estDelDate": "28/07/2018"
+                    "startDate": "14:58 26/07/2019",
+                    "estDelDate": "28/07/2019"
                 },
                 {
                     "orderNo": 568975,
-                    "status": "Moving",
+                    "status": "Received",
                     "statusColor": "success",
                     "operator": "Kishan Ashton",
                     "operatorImg": "avatar-s-1.png",
@@ -297,15 +297,15 @@ export default {
                         { name: 'Julee Rossignol', img: 'avatar-s-10.png' },
                         { name: 'Jeffrey Gerondale', img: 'avatar-s-9.png' },
                     ],
-                    "location": "Florence, Alabama",
+                    "location": "Taco Bell",
                     "distance": "168 km",
                     "distPercent": 70,
-                    "startDate": "14:58 26/07/2018",
-                    "estDelDate": "28/07/2018"
+                    "startDate": "14:58 26/07/2019",
+                    "estDelDate": "28/07/2019"
                 },
                 {
                     "orderNo": 245689,
-                    "status": "Canceled",
+                    "status": "Cancelled",
                     "statusColor": "danger",
                     "operator": "Anabella Elliott",
                     "operatorImg": "avatar-s-6.png",
@@ -313,11 +313,11 @@ export default {
                         { name: 'Vennie Mostowy', img: 'avatar-s-5.png' },
                         { name: 'Elicia Rieske', img: 'avatar-s-7.png' }
                     ],
-                    "location": "Clifton, Arizona",
+                    "location": "Inqtel",
                     "distance": "125 km",
                     "distPercent": 95,
-                    "startDate": "14:58 26/07/2018",
-                    "estDelDate": "28/07/2018"
+                    "startDate": "14:58 26/07/2019",
+                    "estDelDate": "28/07/2019"
                 }
 
             ]

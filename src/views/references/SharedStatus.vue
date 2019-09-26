@@ -120,6 +120,11 @@
                             
                         </td>                    
                     </tr>
+                    <tr>
+                        <td colspan="7" class="package-row">
+                            <vs-button color="primary" size="small">Download Amazon Package</vs-button>
+                        </td>
+                    </tr>
                      <tr>
                         <td>
                             2342349
@@ -223,6 +228,11 @@
                             
                         </td>                    
                     </tr>
+                    <tr>
+                        <td colspan="7" class="package-row">
+                            <vs-button color="primary" size="small">Download PRU Package</vs-button>
+                        </td>
+                    </tr>
                 </tbody>
                 <tfoot>
                     <tr>
@@ -259,6 +269,9 @@ export default {
     }
     .name-column {
         text-align: left;
+    }
+    .package-row {
+        border: 1px solid black;
     }
 </style>
 

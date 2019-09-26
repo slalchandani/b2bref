@@ -83,13 +83,28 @@ const router = new Router({
                 component: () => import("./views/references/RequestReference.vue")
               },
               {
-                path: '/references/manage',
+                path: '/references/open',
                 name: 'manage-references',
                 component: () => import("./views/references/ManageReference.vue")
               },
               {
+                path: '/references/received',
+                name: 'received-requests',
+                component: () => import("./views/references/Received.vue")
+              },
+              {
                 path: '/references/share',
-                name: 'share-references',
+                name: 'share-reference',
+                component: () => import("./views/references/Share.vue")
+              },
+              {
+                path: '/references/share_status',
+                name: 'share-status',
+                component: () => import("./views/references/SharedStatus.vue")
+              },
+              {
+                path: '/references/shared',
+                name: 'shared-references',
                 component: () => import("./views/references/ShareReference.vue")
               },
               {

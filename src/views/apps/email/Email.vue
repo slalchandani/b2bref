@@ -20,7 +20,7 @@
                 </div>
                 <div class="flex">
 
-                    <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer" v-if="mailFilter != 'sent'">
+                 <!--    <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer" v-if="mailFilter != 'sent'">
 
                         <feather-icon icon="FolderIcon" class="cursor-pointer" svg-classes="h-6 w-6"></feather-icon>
 
@@ -44,9 +44,9 @@
                                 </li>
                             </ul>
                         </vs-dropdown-menu>
-                    </vs-dropdown>
+                    </vs-dropdown> -->
 
-                    <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
+                   <!--  <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
 
                         <feather-icon icon="TagIcon" class="cursor-pointer ml-5" svg-classes="h-6 w-6"></feather-icon>
 
@@ -58,11 +58,11 @@
                                     </li>
                                 </ul>
                         </vs-dropdown-menu>
-                    </vs-dropdown>
+                    </vs-dropdown> -->
 
-                    <feather-icon icon="MailIcon" class="ml-5 cursor-pointer" svg-classes="h-6 w-6" @click="updateMarkUnread"></feather-icon>
+                    <!-- <feather-icon icon="MailIcon" class="ml-5 cursor-pointer" svg-classes="h-6 w-6" @click="updateMarkUnread"></feather-icon>
 
-                    <feather-icon icon="TrashIcon" class="cursor-pointer ml-5" svg-classes="h-6 w-6" @click="moveTo('trashed')"></feather-icon>
+                    <feather-icon icon="TrashIcon" class="cursor-pointer ml-5" svg-classes="h-6 w-6" @click="moveTo('trashed')"></feather-icon> -->
                 </div>
             </div>
 

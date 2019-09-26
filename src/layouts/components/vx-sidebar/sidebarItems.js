@@ -77,18 +77,38 @@ export default [
     i18n: "References",
     submenu : [
       {
-        url: '/references/manage',
-        name: "Manage",
-        slug: "manage-references"
-      },
-      {
         url: '/references/request',
-        name: 'Request',
+        name: 'New Request',
         slug: 'request-reference'        
       },
       {
+        url: '/references/open',
+        name: "Open Requests",
+        slug: "manage-references"
+      },
+      {
+        url: '/references/received',
+        name: 'Received',
+        slug: "received-requests"
+      },
+      {
+        url: "/references/share",
+        name: "Share",
+        slug: "share-references"
+      },
+      {
+        url: "/references/share_status",
+        name: "Shared Status",
+        slug: "shared-status"
+      },
+      {
+        url: '/references/shared',
+        name: "Shared",
+        slug: "shared-references"
+      },
+      {
         url: '/references/direct',
-        name: 'B2B Direct',
+        name: 'Messages',
         slug: 'email'
       }
     ]

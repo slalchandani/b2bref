@@ -13,10 +13,10 @@
                     <div class="ml-10 mb-4 mt-1">
                         <div class="email__actions--single flex items-baseline">
 
-                            <feather-icon icon="StarIcon" class="cursor-pointer" :svgClasses="[{'text-warning stroke-current stroke-current': currentMail.isStarred}, 'h-6 w-6']" @click="toggleIsStarred" />
+                            <!-- <feather-icon icon="StarIcon" class="cursor-pointer" :svgClasses="[{'text-warning stroke-current stroke-current': currentMail.isStarred}, 'h-6 w-6']" @click="toggleIsStarred" /> -->
 
                             <!-- MOVE TO DROPDOWN -->
-                            <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer" v-if="mailFilter != 'sent'">
+                            <!-- <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer" v-if="mailFilter != 'sent'">
                                 <feather-icon icon="FolderIcon" svg-classes="h-6 w-6" class="ml-4"></feather-icon>
                                 <vs-dropdown-menu>
                                     <ul class="my-2">
@@ -38,10 +38,10 @@
                                         </li>
                                     </ul>
                                 </vs-dropdown-menu>
-                            </vs-dropdown>
+                            </vs-dropdown> -->
 
                             <!-- ADD LABEL DROPDOWN -->
-                            <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
+                           <!--  <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
                                 <feather-icon icon="TagIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4"></feather-icon>
                                 <vs-dropdown-menu style="z-index: 40001">
                                         <vs-dropdown-item v-for="(label, index) in emailTags" :key="index">
@@ -53,7 +53,7 @@
                             <feather-icon icon="MailIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4" @click="$emit('markUnread')"></feather-icon>
                             <feather-icon icon="TrashIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4" @click="$emit('removeMail')"></feather-icon>
                             <feather-icon icon="ChevronsLeftIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4 hidden sm:inline-flex" @click="$emit('previousMail')"></feather-icon>
-                            <feather-icon icon="ChevronsRightIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4 hidden sm:inline-flex" @click="$emit('nextMail')"></feather-icon>
+                            <feather-icon icon="ChevronsRightIcon" svg-classes="h-6 w-6" class="cursor-pointer ml-4 hidden sm:inline-flex" @click="$emit('nextMail')"></feather-icon> -->
                         </div>
                     </div>
                 </div>

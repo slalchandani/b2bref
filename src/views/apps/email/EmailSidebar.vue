@@ -1,8 +1,8 @@
 <template>
     <div class="email__email-sidebar h-full">
-        <div class="m-6 clearfix">
+        <!-- <div class="m-6 clearfix">
             <vs-button size="large" class="bg-primary-gradient w-full" icon-pack="feather" icon="icon-edit" @click="activePrompt = true">Compose</vs-button>
-        </div>
+        </div> -->
 
         <!-- compose email -->
         <vs-prompt
@@ -27,7 +27,7 @@
         </vs-prompt>
 
         <VuePerfectScrollbar class="email-scroll-area" :settings="settings">
-            <div class="px-6 pb-2 flex flex-col">
+            <div class="px-6 mt-5 pb-2 flex flex-col">
 
                 <!-- inbox -->
                 <div class="flex justify-between items-center cursor-pointer" :class="{'text-primary': mailFilter == 'inbox'}" @click="updateFilter('inbox')">
@@ -39,19 +39,19 @@
                 </div>
 
                 <!-- sent -->
-                <div class="flex items-center mt-4 mb-2 cursor-pointer" :class="{'text-primary': mailFilter == 'sent'}" @click="updateFilter('sent')">
+                <!-- <div class="flex items-center mt-4 mb-2 cursor-pointer" :class="{'text-primary': mailFilter == 'sent'}" @click="updateFilter('sent')">
                     <feather-icon icon="SendIcon" :svgClasses="[{'text-primary stroke-current': mailFilter == 'sent'}, 'h-6 w-6']"></feather-icon>
                     <span class="text-lg ml-3">Sent</span>
-                </div>
+                </div> -->
 
                 <!-- draft -->
-                <div class="flex justify-between items-center mt-4 cursor-pointer" :class="{'text-primary': mailFilter == 'draft'}" @click="updateFilter('draft')">
+                <!-- <div class="flex justify-between items-center mt-4 cursor-pointer" :class="{'text-primary': mailFilter == 'draft'}" @click="updateFilter('draft')">
                     <div class="flex items-center mb-2">
                         <feather-icon icon="Edit2Icon" :svgClasses="[{'text-primary stroke-current': mailFilter == 'draft'}, 'h-6 w-6']"></feather-icon>
                         <span class="text-lg ml-3">Draft</span>
                     </div>
                     <vs-chip class="number" color="warning" v-if="draftMails > 0">{{ draftMails }}</vs-chip>
-                </div>
+                </div> -->
 
                 <!-- starred -->
                 <!-- <div class="flex items-center mt-4 mb-2 cursor-pointer" :class="{'text-primary': mailFilter == 'starred'}" @click="updateFilter('starred')">
@@ -69,10 +69,10 @@
                 </div> -->
 
                 <!-- trash -->
-                <div class="flex items-center mt-4 mb-2 cursor-pointer" :class="{'text-primary': mailFilter == 'trash'}" @click="updateFilter('trash')">
+                <!-- <div class="flex items-center mt-4 mb-2 cursor-pointer" :class="{'text-primary': mailFilter == 'trash'}" @click="updateFilter('trash')">
                     <feather-icon icon="TrashIcon" :svgClasses="[{'text-primary stroke-current': mailFilter == 'trash'}, 'h-6 w-6']"></feather-icon>
                     <span class="text-lg ml-3">Trash</span>
-                </div>
+                </div> -->
             </div>
             <vs-divider></vs-divider>
             <div class="email__labels px-6 py-4">

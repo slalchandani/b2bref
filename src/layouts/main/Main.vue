@@ -15,7 +15,7 @@
             @toggleHideScrollToTop="toggleHideScrollToTop"
             />
 
-        <vx-sidebar :sidebarItems="sidebarItems" :logo="require('@/assets/images/logo/B2BRef.png')" title="B2B-REF" parent=".layout--main" />
+        <vx-sidebar :sidebarItems="sidebarItems" :logo="require('@/assets/images/logo/B2BRef.png')" title="B2B REF" parent=".layout--main" />
 
         <div id="content-area" :class="[contentAreaClass, {'show-overlay': bodyOverlay}]">
 

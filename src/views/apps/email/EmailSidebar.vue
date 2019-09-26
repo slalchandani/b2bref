@@ -33,7 +33,7 @@
                 <div class="flex justify-between items-center cursor-pointer" :class="{'text-primary': mailFilter == 'inbox'}" @click="updateFilter('inbox')">
                     <div class="flex items-center mb-2">
                         <feather-icon icon="MailIcon" :svgClasses="[{'text-primary stroke-current': mailFilter == 'inbox'}, 'h-6 w-6']"></feather-icon>
-                        <span class="text-lg ml-3">Inbox</span>
+                        <span class="text-lg ml-3">Direct Messages</span>
                     </div>
                     <vs-chip class="number" color="primary" v-if="unreadMails('inboxed') > 0">{{ unreadMails('inboxed') }}</vs-chip>
                 </div>

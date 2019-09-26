@@ -75,7 +75,7 @@
                 </div> -->
             </div>
             <vs-divider></vs-divider>
-            <div class="email__labels px-6 py-4">
+            <!-- <div class="email__labels px-6 py-4">
                 <h5 class="mb-8">Labels</h5>
                 <div class="email__lables-list">
                     <div class="email__label flex items-center mb-4 cursor-pointer" v-for="(tag, index) in emailTags" :key="index" @click="updateFilter(tag.value)">
@@ -83,7 +83,7 @@
                         <span class="text-lg" :class="{'text-primary': mailFilter == tag.value}">{{ tag.text }}</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </VuePerfectScrollbar>
     </div>
 </template>

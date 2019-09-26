@@ -10,7 +10,7 @@
             <!-- SEARCH BAR -->
             <div class="flex border items-center app-search-container">
                 <feather-icon class="md:inline-flex lg:hidden ml-4 mr-4 cursor-pointer" icon="MenuIcon" @click.stop="toggleEmailSidebar(true)"></feather-icon>
-                <vs-input icon="icon-search" size="large" icon-pack="feather" placeholder="Search Mail" v-model="searchQuery" class="vs-input-no-border vs-input-no-shdow-focus w-full no-icon-border" />
+                <vs-input icon="icon-search" size="large" icon-pack="feather" placeholder="Search Messages" v-model="searchQuery" class="vs-input-no-border vs-input-no-shdow-focus w-full no-icon-border" />
             </div>
 
             <!-- EMAIL ACTION BAR -->

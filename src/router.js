@@ -93,7 +93,7 @@ const router = new Router({
                 component: () => import("./views/references/Received.vue")
               },
               {
-                path: '/references/share',
+                path: '/references/shared',
                 name: 'share-reference',
                 component: () => import("./views/references/Share.vue")
               },
@@ -103,8 +103,8 @@ const router = new Router({
                 component: () => import("./views/references/SharedStatus.vue")
               },
               {
-                path: '/references/shared',
-                name: 'shared-references',
+                path: '/references/share',
+                name: 'share-reference',
                 component: () => import("./views/references/ShareReference.vue")
               },
               {
